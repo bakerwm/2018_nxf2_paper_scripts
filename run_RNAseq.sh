@@ -1,4 +1,13 @@
 
+# Author: Ming Wang
+# Email: wangming@ibp.ac.cn
+# Date: 2018-10-16
+# License: MIT License
+
+# The following codes were designed to generate high quality plots for
+# publication.
+
+
 # The following script was tested on Ubuntu 18.04 server
 
 # !!! important
@@ -10,15 +19,17 @@ path_to_hipipe="${path_to_project}/src/hipipe"
 
 
 # prepare your working directory
-mkdir ${path_to_project} ${path_to_rawdata} ${path_to_cleandata}
+mkdir ${path_to_project} ${path_to_rawdata} ${path_to_cleandata} ${path_to_hipipe}
+
+# clone this repository to your project directory
+cd ${path_to_project}/src
+git clone https://github.com/bakerwm/2018_nxf2_paper_scripts.git  
 
 # clone Python scripts for this publication
-cd ${path_to_hipipe}
 git clone https://github.com/bakerwm/hipipe
 # add hipipe directory to your PATH
 # add the following line to your "~/.bashrc" file.
 export PATH="$HOME/work/wmlib/hipipe:$PATH"
-
 
 cd ../.. # back to main project directory
 
